@@ -1,6 +1,6 @@
 const multer  = require('multer')
-const user_controller = require('../controllers/usercontrollers')
-const blog_controller = require('../controllers/blogcontroller')
+const user_controller = require('../controllers/userControllers')
+const blog_controller = require('../controllers/blogController')
 const reset = require('../middlewares/reset_password_link')
 const update = require('../middlewares/update_password')
 

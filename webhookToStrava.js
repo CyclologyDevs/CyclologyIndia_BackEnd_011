@@ -16,7 +16,7 @@ process.on("message", async function (message) {
 
 
 function insertActivitiesIntoStravaTable(athelete,user, json) {
-  const sql = 'INSERT INTO strava (uuid,athlete_id, activity_id, activity_name average_speed, distance, elapsed_time, max_speed, moving_time, start_date_local, start_date_local_epoch, total_elevation_gain) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)';
+  const sql = 'INSERT INTO strava (uuid,athlete_id, activity_id, activity_name, average_speed, distance, elapsed_time, max_speed, moving_time, start_date_local, start_date_local_epoch, total_elevation_gain) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)';
   let params;
   params = [athelete.uuid,user.owner_id, user.object_id, json.activity_name, json.average_speed, json.distance, json.elapsed_time, json.max_speed, json.moving_time, json.start_date_local, json.start_date_local_epoch, json.total_elevation_gain];
       db.run(sql, params, err => {

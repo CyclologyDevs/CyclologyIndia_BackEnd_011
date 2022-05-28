@@ -41,7 +41,6 @@ function changeDatetimeToDate(json1)
     }
 }
 
-
   function insertActivitiesIntoStravaTable(athelete,user, json) {
 
     const sql = 'INSERT INTO strava (uuid,athlete_id, activity_id, activity_name, average_speed, distance, elapsed_time, max_speed, moving_time, start_date_local, start_date_local_epoch, total_elevation_gain) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)';
